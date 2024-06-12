@@ -1012,24 +1012,7 @@ function jump() {
             gsap.to(ocas, { duration: 0.1, rotation: 0 });
         }
         
-        // Function to reset the rotation
-        function resetRotation() {
-            const vrchnicast = document.getElementById('vrchnicast');
-            const strednicast = document.getElementById('strednicast');
-            const ocas = document.getElementById('ocas');
-        
-            let currentTransform = vrchnicast.getAttribute('transform') || '';
-            currentTransform = currentTransform.replace(/rotate\([^)]*\)/, '');
-            vrchnicast.setAttribute('transform', currentTransform);
-        
-            let strednicastcurrentTransform = strednicast.getAttribute('transform') || '';
-            strednicastcurrentTransform = strednicastcurrentTransform.replace(/rotate\([^)]*\)/, '');
-            strednicast.setAttribute('transform', strednicastcurrentTransform);
-        
-            let ocascurrentTransform = ocas.getAttribute('transform') || '';
-            ocascurrentTransform = ocascurrentTransform.replace(/rotate\([^)]*\)/, '');
-            ocas.setAttribute('transform', ocascurrentTransform);
-        }
+ 
         
         function rotateKridlo() {
             gsap.fromTo("#kridlo", { rotation: 0, transformOrigin: "90% 40%" }, { rotation: 20, duration: 0.2, yoyo: true, repeat: 1 });
