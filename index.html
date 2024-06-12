@@ -1070,7 +1070,8 @@ function jump() {
         function rotateZobakd(mouseY) {
             // Create a new audio element
             var audio = new Audio('rooster.wav');
-           audio.volume(0.1); audio.play();
+ 
+           audio.volume = 0.1; audio.play();
             
             const zobakdRect = zobakd.getBBox();
             const cx = zobakdRect.x + zobakdRect.width + 5;
